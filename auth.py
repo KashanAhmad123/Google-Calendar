@@ -15,6 +15,7 @@ credentials = pickle.load(open("token.pkl", "rb"))
 
 service = build("calendar", "v3", credentials=credentials)
 
+
 result = service.calendarList().list().execute()
 
 result['items'][0]
@@ -59,6 +60,8 @@ result['items'][0]
  'iCalUID': '0slqq110a9171scjmrfojjquse@google.com',
  'sequence': 0,
  'extendedProperties': {'private': {'everyoneDeclinedDismissed': '-1'}},'reminders': {'useDefault': True}}
+
+
 from datetime import datetime, timedelta
 
 start_time = datetime(2019, 5, 12, 19, 30, 0)
